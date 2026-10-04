@@ -31,6 +31,10 @@
     -webkit-font-smoothing:antialiased; text-wrap:pretty; }
   a { color:#2c5cb4; text-decoration:none; }
   a:hover { color:#0b0b0b; }
+  @media (max-width: 760px) {
+    [data-sticky-photo] { position: static !important; }
+    [data-sticky-photo] img { max-width: 300px !important; }
+  }
 </style>
 </helmet>
 
@@ -90,7 +94,7 @@
 
   <section style="max-width:1160px; width:100%; margin:0 auto; padding:clamp(48px,6vw,80px) 32px clamp(56px,7vw,96px); box-sizing:border-box; border-top:1px solid #dedbd4;">
     <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:clamp(32px,5vw,72px); align-items:start;">
-      <div style="position:sticky; top:96px;">
+      <div data-sticky-photo="true" style="position:sticky; top:96px;">
         <img src="steve-portrait-bw.png" alt="Steve Crowe" style="width:100%; aspect-ratio:4/5; max-width:420px; object-fit:cover; display:block;" />
       </div>
       <div style="display:flex; flex-direction:column; gap:22px; max-width:60ch;">
